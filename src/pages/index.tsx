@@ -1,17 +1,8 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import SignIn from "./auth/signin";
-
-const inter = Inter({ subsets: ["latin"] });
-
+import SignIn from './auth/signin';
 export default function Home() {
   return (
-    <main
-
-    >
-
+    <main>
       <SignIn></SignIn>
-
     </main>
   );
 }

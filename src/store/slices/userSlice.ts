@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface User {
   id: number;
@@ -20,10 +20,10 @@ const initialState: UsersState = {
 };
 
 const usersSlice = createSlice({
-  name: "users",
+  name: 'users',
   initialState,
   reducers: {
-    fetchUsersStart: (state) => {
+    fetchUsersStart: state => {
       state.isLoading = true;
       state.error = null;
     },

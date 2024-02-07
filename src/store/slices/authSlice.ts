@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface UserProfile {
   name: string | null | undefined;
@@ -19,7 +19,7 @@ const initialState: AuthState = {
 };
 
 const authSlice = createSlice({
-  name: "auth",
+  name: 'auth',
   initialState,
   reducers: {
     setAuthLoading: (state, action: PayloadAction<boolean>) => {
@@ -31,7 +31,7 @@ const authSlice = createSlice({
     setAuthError: (state, action: PayloadAction<string | null>) => {
       state.error = action.payload;
     },
-    clearAuthState: (state) => {
+    clearAuthState: state => {
       state.isLoading = false;
       state.user = null;
       state.error = null;

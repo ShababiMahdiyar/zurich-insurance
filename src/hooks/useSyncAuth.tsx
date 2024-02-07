@@ -11,11 +11,13 @@ const useSyncAuth = () => {
 
   useEffect(() => {
     if (status === 'authenticated' && session) {
-      dispatch(setUserProfile({
-        name: session.user?.name,
-        email: session.user?.email,
-        image: session.user?.image,
-      }));
+      dispatch(
+        setUserProfile({
+          name: session.user?.name,
+          email: session.user?.email,
+          image: session.user?.image,
+        })
+      );
       if (router.pathname !== '/dashboard') {
         router.push('/dashboard');
       }

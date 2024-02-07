@@ -1,6 +1,5 @@
 import { getSession } from 'next-auth/react';
 import { GetServerSideProps } from 'next';
-import { Footer } from '@/components/Footer';
 import axios from 'axios';
 import { Content } from '@/components/Content';
 
@@ -17,12 +16,10 @@ interface DashboardProps {
 }
 
 export default function Dashboard({ users }: DashboardProps) {
-  return (
-    <Content />
-  );
+  return <Content users={users} />;
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async context => {
   const session = await getSession({ req: context.req });
   if (!session) {
     return {
@@ -34,12 +31,13 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   }
   try {
     const { data } = await axios.get('https://reqres.in/api/users');
-    const users = data.data.filter((user: User) =>
-      user.first_name.startsWith('G') || user.last_name.startsWith('W')
+    const users = data.data.filter(
+      (user: User) =>
+        user.first_name.startsWith('G') || user.last_name.startsWith('W')
     );
     return { props: { users } };
   } catch (error) {
-    console.error("Failed to fetch users:", error);
+    console.error('Failed to fetch users:', error);
     return { props: { users: [] } };
   }
 };
