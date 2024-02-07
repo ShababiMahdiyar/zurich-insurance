@@ -2,6 +2,7 @@ import { getSession } from 'next-auth/react';
 import { GetServerSideProps } from 'next';
 import { Footer } from '@/components/Footer';
 import axios from 'axios';
+import { Content } from '@/components/Content';
 
 interface User {
   id: number;
@@ -17,17 +18,7 @@ interface DashboardProps {
 
 export default function Dashboard({ users }: DashboardProps) {
   return (
-    <div className='w-full h-full flex flex-col'>
-      <div className='flex-grow'>
-        {users.map((user) => (
-          <div key={user.id}>
-            <p>{user.first_name} {user.last_name}</p>
-            <img src={user.avatar} alt={`Avatar of ${user.first_name}`} />
-          </div>
-        ))}
-      </div>
-      <Footer />
-    </div>
+    <Content />
   );
 }
 

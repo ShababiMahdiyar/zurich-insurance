@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Image from 'next/image';
 
 interface User {
   id: number;
@@ -43,7 +44,7 @@ export const Content = () => {
           <p>
             Name: {user.first_name} {user.last_name}
           </p>
-          <img src={user.avatar} alt={`Profile of ${user.first_name}`} />
+          <Image src={user.avatar} alt={`Profile of ${user.first_name}`} width={50} height={50} />
         </div>
       ))}
     </div>
