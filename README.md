@@ -14,8 +14,10 @@ Dynamic Data Filtering: The users list feature filters data dynamically, demonst
 Unit Testing: The application includes a suite of unit tests using Jest and React Testing Library, highlighting my commitment to maintaining code quality and reliability.
 
 Technical Stack
-Front-End: Next.js, Redux, React Testing Library
-Authentication: Google OAuth2
-Testing: Jest, React Testing Library
-Styling: [tailwindCSS]
+- Front-End: Next.js, Redux, React Testing Library
+- Authentication: Google OAuth2
+- Testing: Jest, React Testing Library
+- Styling: [tailwindCSS]
+
+For Local deployment, kindly update the .env.local file with your own details.
 
