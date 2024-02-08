@@ -10,7 +10,7 @@ export const Header = () => {
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
           <a className="flex items-center space-x-3 rtl:space-x-reverse cursor-auto" >
             <Image src={'/logo.jpg'} alt={'logo'} width={30} height={30} />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
               Zurich
             </span>
           </a>
@@ -42,9 +42,8 @@ export const Header = () => {
                       </svg>
                     </div>
                   )}
-                  <div className="flex font-medium dark:text-white">
-                    <a className="text-base text-gray-500 dark:text-white font-semibold">
-                      {' '}
+                  <div className="flex font-medium">
+                    <a className="text-base text-white font-semibold">
                       {session.user.name ?? 'User'}
                     </a>
                   </div>
