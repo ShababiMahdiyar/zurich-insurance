@@ -1,4 +1,6 @@
-Zurich Project
+Zurich Project 
+Deployment URL : https://zurich-insurance-gpol.vercel.app
+
 Introduction
 Hello and welcome to my project submission for the Zurich Customer Portal. This project is a culmination of my skills and practices in front-end development, crafted with attention to detail and a focus on modern web development standards. 
 
